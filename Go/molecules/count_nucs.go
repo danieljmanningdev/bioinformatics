@@ -7,13 +7,14 @@
 
 package molecules
 
-// CountNucleotides counts the occurrences of A, C, G, and T in a DNA sequence.
-//
-// For each nucleotide X ∈ {A, C, G, T}:
-//
-//	N_X(s) = Σᵢ 1[sᵢ = X]
-//
-// Returns counts in the order A, C, G, T.
+/*
+CountNucleotides counts the occurrences of A, C, G, and T in a DNA sequence.
+
+	For each nucleotide X ∈ {A, C, G, T}:
+		N_X(s) = Σᵢ 1[sᵢ = X]
+	Returns counts in the order A, C, G, T.
+*/
+
 func CountNucleotides(s string) [4]int {
 	counts := make(map[rune]int)
 
