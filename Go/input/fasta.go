@@ -20,11 +20,11 @@ import "strings"
    where s ∈ Σ^n and Σ = {A, C, G, T}.
 */
 
-func ParseFASTA(data string) map[string]string {
+func ParseFASTA(lines []string) map[string]string {
 	records := map[string]string{}
 	currentID := ""
 
-	for _, line := range strings.Split(data, "\n") {
+	for _, line := range lines {
 		line = strings.TrimSpace(line)
 
 		if strings.HasPrefix(line, ">") {

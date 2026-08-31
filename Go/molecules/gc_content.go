@@ -47,7 +47,7 @@ func GCContent(s string) float64 {
        s_r is the DNA sequence belonging to record r.
 */
 
-func HighestGC(data string) (string, float64) {
+func HighestGC(data []string) (string, float64) {
 	records := input.ParseFASTA(data)
 	highestID := ""
 	highestValue := 0.0
